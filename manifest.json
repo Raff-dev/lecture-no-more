@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Lecture No More",
+    "description": "Removes the lecture blocks from WAT WCY course plan",
+    "version": "1.0",
+    "icons": {
+        "16": "images/miki.png",
+        "32": "images/miki.png",
+        "48": "images/miki.png",
+        "128": "images/miki.png"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "images/miki.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/main.js"
+            ],
+            "matches": [ "*://s1.wcy.wat.edu.pl/ed1/logged_inc.php?*"]
+        }
+    ]
+}
