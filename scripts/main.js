@@ -9,14 +9,14 @@ var toggle = (enabled) => {
     }
 };
 
-chrome.storage.sync.get(['enabled'], function(result) {
-    toggle(result.enabled)
+chrome.storage.sync.get(["enabled"], function (result) {
+    toggle(result.enabled);
 });
 
-chrome.storage.onChanged.addListener(function(changes, namespace) {
+chrome.storage.onChanged.addListener(function (changes, namespace) {
     for (let key in changes) {
         if (key === "enabled") {
             toggle(changes[key].newValue);
         }
     }
-})
+});
