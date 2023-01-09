@@ -1,5 +1,4 @@
 const update = (button, toggle) => {
-    console.log("egegeg");
     chrome.storage.sync.get(["enabled"], function (result) {
         let paragraph = document.getElementById("text");
         let enabled = result.enabled;

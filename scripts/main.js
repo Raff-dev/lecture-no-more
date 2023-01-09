@@ -66,7 +66,6 @@ var updateMissingSubjects = () => {
         let subjectsSaved = result.subjects || {};
         let newSubjects = {};
 
-        console.log(subjectsSaved);
         for (let subject in tiles) {
             if (subject in subjectsSaved) {
                 newSubjects[subject] = subjectsSaved[subject];
